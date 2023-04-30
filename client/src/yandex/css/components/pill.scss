@@ -1,0 +1,18 @@
+.pill {
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 16px;
+    line-height: 32px;
+    padding: 0 12px 0 12px;
+    transition-duration: .1s;
+    transition-property: background-color, color;
+    transition-timing-function: ease;
+
+    text-decoration: none;
+    display: inline-block;
+
+    font-size: 1rem !important;
+    margin: 0 5px;
+    color: #fff;
+
+
+}

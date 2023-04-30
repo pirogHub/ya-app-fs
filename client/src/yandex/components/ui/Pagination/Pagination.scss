@@ -1,0 +1,18 @@
+.PagesButtons__container {
+    display: flex;
+    justify-content: center;
+}
+
+.PagesButtons__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & .pagesCount__label {
+        font-size: 9px;
+        display: flex;
+        // flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}

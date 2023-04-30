@@ -1,0 +1,58 @@
+.TwoInputs__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding-inline: 4px;
+}
+
+.simpleInput {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    // font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.TwoInputs__wrapper {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.postfix {
+    background-color: rgba($color: #ddd, $alpha: .1);
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-inline: 5px;
+    // min-width: 2rem;
+
+    &.border-left {
+        border-left: 1px solid #ccc;
+
+    }
+
+    & .bi::before {
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,44 @@
+.PriceInfo__Wrapper {
+    display: flex;
+    font-size: 17px;
+    margin-bottom: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.PriceInfo__Labels {
+    font-weight: bold;
+
+    & .PriceTotal,
+    & .PricePerMeter {
+        display: flex;
+        justify-content: space-between;
+
+        &>*:last-child {
+            color: #aaa;
+        }
+
+        &>*:first-child {
+            color: #665;
+        }
+    }
+
+}
+
+.PriceInfo__Prices {
+
+    display: flex;
+    flex-direction: column;
+
+
+    & .PriceTotal,
+    & .PricePerMeter {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+
+.PriceInfo__Postfixes {
+    color: #aaa;
+}

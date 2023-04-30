@@ -1,0 +1,11 @@
+.TableFilters__footer {
+    position: relative;
+}
+
+.TableFilters__footer.additionalFilters-show {
+    display: block;
+}
+
+.TableFilters__footer.additionalFilters-none {
+    display: none;
+}

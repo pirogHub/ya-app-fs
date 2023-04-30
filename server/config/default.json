@@ -1,0 +1,6 @@
+{
+    "port": 8080,
+    "mongoUri": "mongodb+srv://vladilen:hotel-booking-1234@cluster0.zvaybsd.mongodb.net/?retryWrites=true&w=majority",
+    "accessSecret": "ultraSuperJwtKey",
+    "refreshSecret": "Key mega giper fror refresh"
+}

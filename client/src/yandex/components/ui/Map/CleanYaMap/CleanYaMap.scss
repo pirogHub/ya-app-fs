@@ -1,0 +1,59 @@
+.ymaps__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 20px;
+}
+
+.Map__isNotRequired__title {
+    font-style: italic;
+    color: #777;
+
+}
+
+.ymaps__input-wrapper {
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+
+    &>*:first-child {
+        width: 100%;
+        // margin-bottom: 0;
+        margin: auto;
+    }
+
+    & input {
+        flex-grow: 2;
+    }
+}
+
+
+.placemark {
+    position: "absolute";
+    top: "50%";
+    left: "50%";
+    transform: "translate(-50%; -100%)";
+    z-index: 1200;
+    font-size: "35px !important";
+    cursor: "grab";
+}
+
+.ymaps__map-wrapper {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .1);
+    position: relative;
+    max-width: 100%;
+    // padding-inline: 10px;
+    // box-sizing: border-box;
+
+    ymaps {
+        border-radius: 10px;
+        max-width: 100%;
+
+        // box-shadow: 0 0 5px 5px rgba(0, 0, 0, .1) inset;
+    }
+}

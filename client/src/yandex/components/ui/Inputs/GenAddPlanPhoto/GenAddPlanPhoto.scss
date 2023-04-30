@@ -1,0 +1,21 @@
+.photosContainer__wrapper {
+    // display: flex;
+    // justify-content: space-around;
+    padding-inline: 15px;
+    margin-bottom: 10px;
+}
+
+.photosContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    // gap: 15px;
+    gap: 10px;
+    // justify-content: space-between;
+}
+
+.AddPlanPhoto__isNotRequired__title {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 20px;
+}

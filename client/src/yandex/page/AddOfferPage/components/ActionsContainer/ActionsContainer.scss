@@ -1,0 +1,26 @@
+.ActionsContainer-content {
+    display: flex;
+    margin-block: 20px;
+    gap: 10px;
+    padding-inline: 10px;
+
+    & .ActionsContainer__item {
+        // flex: 1;
+        // min-width: 25%;
+        display: flex;
+        justify-content: center;
+        // margin-right: 10px;
+
+    }
+}
+
+.ActionsContainer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.ActionsContainer-title {
+    text-align: left;
+}

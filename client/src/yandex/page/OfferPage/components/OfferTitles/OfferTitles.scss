@@ -1,0 +1,23 @@
+.OfferTitles__Wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.OfferTitles__Title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    & .hint {
+        color: #444;
+        font-weight: 400;
+    }
+
+    &.additionalTitleWithLink {
+        flex-direction: row;
+    }
+
+}

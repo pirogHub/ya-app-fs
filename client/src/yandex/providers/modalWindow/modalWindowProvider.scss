@@ -1,0 +1,61 @@
+.modalWindow__contentWrapper {
+    position: relative;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
+}
+
+.modal-window {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1000;
+
+    transition: opacity 0.3s, z-index 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+
+
+    & .modal-window-content {
+        position: sticky;
+        top: 50%;
+        transition: opacity 0.3s, z-index 0.3s;
+        z-index: 1100;
+        cursor: default;
+
+    }
+
+    & .modal-window-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // right: 0;
+        --bgForce: 0.6;
+        width: 100%;
+        overflow-x: hidden;
+        bottom: 0;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, var(--bgForce));
+
+        &.notClosed {
+            cursor: default;
+        }
+    }
+}
+
+.modal-window.modal-window-show {
+    opacity: 1;
+    z-index: 1000;
+    // overflow-x: hidden;
+
+    transition: opacity 0.1s, z-index 0.1s;
+}
+
+.modal-window.oveflow__hidden {
+    overflow-x: hidden;
+}

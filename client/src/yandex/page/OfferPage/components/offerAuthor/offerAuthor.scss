@@ -1,0 +1,23 @@
+.OfferAuthor__image {
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    object-fit: contain;
+    height: 40px;
+    max-width: 40px;
+}
+
+.OfferAuthor__wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+    padding-inline: 10px;
+
+    &:hover {
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    }
+}

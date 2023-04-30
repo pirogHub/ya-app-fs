@@ -1,0 +1,104 @@
+.FormRow {
+    // margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 5px;
+    padding-inline: 5px;
+
+
+    &.invalid {
+        background-color: rgba(255, 33, 33, 0.2);
+    }
+
+    // &>div:first-child {
+    & .FormRow__titleWrapper {
+        // flex: 1;
+        width: 20%;
+        flex-shrink: 0;
+    }
+
+    &>div:last-child {
+        // flex: 2;
+
+    }
+
+    & .FormRow-content {
+        flex-basis: 100%;
+    }
+}
+
+.FormRow__titleWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+
+.FormRow__title {
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    line-height: normal;
+    // margin-top: 0.5rem;
+    // height: 100%;
+    margin-block: auto;
+}
+
+.FormRow-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+
+    padding-block: 10px;
+    // margin-bottom: 5px;
+
+    // &.withoutErrors>* {
+    //     margin-block: 0;
+    // }
+
+    &>* {
+        margin-block: 0;
+    }
+
+    &.withoutLabel {
+        justify-content: space-around;
+    }
+
+}
+
+.FormRow__icon-wrapper {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    bottom: 0;
+    color: #f00;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+
+
+    &>* {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.FormRow__isNotRequiredTitleWrapper {
+    position: absolute;
+    width: 100%;
+    top: -5px;
+    left: 0;
+}
+
+.FormRow__isNotRequiredTitle {
+    font-style: italic;
+    color: #777;
+}
+
+.error-wrapper.maxWidth {
+    width: 300%;
+}

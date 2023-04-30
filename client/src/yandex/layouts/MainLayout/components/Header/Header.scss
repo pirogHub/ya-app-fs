@@ -1,0 +1,51 @@
+.Header__wrapper {
+    position: relative;
+}
+
+.Header__content-wrapper {
+    max-width: 85%;
+    // min-height: 100px;
+    margin: auto;
+    // top: -170px;
+    z-index: 3;
+    position: relative;
+    // margin-bottom: -170px;
+    // margin-bottom: -170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.absolute {
+        position: absolute;
+        top: 0;
+        // bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.Header__banner-wrapper {
+
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // // bottom: 0;
+    // top: 0;
+
+    // display: flex;
+    // justify-content: center;
+}
+
+.Header__usefullContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.img__plug {
+    // width: 100%;
+    padding: 10px;
+    background-color: #444;
+    border-radius: inherit;
+}

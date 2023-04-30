@@ -1,0 +1,95 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+
+.ErrorShower__wrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 9999;
+    right: 0;
+    top: 140px;
+    margin: 20px;
+    // margin-top: 80px;
+}
+
+.Notification {
+    &.NotificationError {
+        background-color: #da4848;
+    }
+
+    &.NotificationWarning {
+        background-color: #ebb73f;
+    }
+
+    &.NotificationValid {
+        background-color: #65da48;
+    }
+
+
+}
+
+.Notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    max-width: 450px;
+    margin: 10px;
+    padding: 12px 16px;
+    background-color: #303030;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 2px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.Notification i {
+    font-size: 20px;
+}
+
+.Notification p {
+    margin: 0;
+    margin-left: 10px;
+    text-align: right;
+    font-size: 13px;
+    word-break: break-all;
+}
+
+.Notification-show {
+    animation-name: notif-toast;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.Notification-hide {
+    animation-name: notif-hide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes notif-toast {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes notif-hide {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+}

@@ -1,0 +1,68 @@
+.HeaderBanner {
+    max-width: 100%;
+    margin: auto;
+    // z-index: 2;
+    position: relative;
+    border-radius: 10px;
+    min-height: 100px;
+
+    background-color: #444;
+    // -webkit-filter: blur(3px);
+    // filter: blur(3px);
+    // -webkit-transition: 4s ease-in-out;
+    // transition: all 4s ease-in-out;
+    // transition: all 4s ease-in-out;
+    // box-shadow: none;
+
+    &.notBlured {
+        //     -webkit-filter: blur(0);
+        //     filter: blur(0);
+
+        //     -webkit-transition: 4s ease-out;
+        // transition: all 4s ease-in-out;
+        // box-shadow: inset 0 0 22px 20px rgba(0, 0, 0, 1);
+
+    }
+
+}
+
+.HeaderBanner__shadower {
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: inset 0 0 5px 2px rgba(44, 44, 44, 0.2);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.HeaderBanner__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: inherit;
+    opacity: 0;
+    animation: HeaderBanner__img__appearing 2s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes HeaderBanner__img__appearing {
+    from {
+        opacity: 0;
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+
+    }
+
+    // 70% {
+    //     opacity: 70%;
+    //     -webkit-filter: blur(1.5px);
+    //     filter: blur(1.5px);
+    // }
+
+    to {
+        opacity: 1;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+
+    }
+}

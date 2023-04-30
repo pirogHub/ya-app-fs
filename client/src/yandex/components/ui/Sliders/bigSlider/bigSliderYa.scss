@@ -1,0 +1,127 @@
+//------------------------
+
+.BigSliderYa_galleryWrapper {
+    grid-area: gallery;
+    min-width: 0;
+    border-radius: 10px;
+}
+
+.BigSliderYa_gallery {
+    position: relative;
+    height: 300px;
+    // height: 185px;
+    min-width: 0;
+    border-radius: inherit;
+}
+
+.BigSliderYa_galleryWrapper {
+    .gallery__control {
+        height: 100%;
+        max-width: 250px;
+        position: absolute;
+        top: 0;
+        width: 50%;
+    }
+
+    .gallery__controlNextImage {
+        right: -20px;
+    }
+
+    .gallery__controlPrevImage {
+        left: -20px;
+    }
+
+    .gallery__controlScroll {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .gallery__controlNext {
+        align-items: flex-end;
+    }
+
+    .gallery__controlPrev {
+        align-items: flex-start;
+    }
+
+    .gallery__slides {
+        border-radius: 16px;
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .gallery__slidesContainer {
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        width: 100%;
+        scroll-behavior: smooth;
+    }
+
+    .gallery__slidesContainerWithSnapScroll {
+        scroll-snap-stop: always;
+        scroll-snap-type: x mandatory;
+    }
+
+    .gallery__badges {
+        bottom: 8px;
+        left: 13px;
+        display: flex;
+        position: absolute;
+        z-index: 11;
+
+        button {
+            margin-right: 10px;
+        }
+    }
+
+    .gallery__slide:first-child {
+        border-bottom-left-radius: 16px;
+        border-top-left-radius: 16px;
+    }
+
+    .gallery__slide:not(:last-child) {
+        margin-right: 4px;
+    }
+
+    .gallery__slide {
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 100%;
+        max-width: 95%;
+        min-height: 0;
+        min-width: 0;
+    }
+
+    .gallerySlide__imageWrapper {
+        align-items: center;
+        cursor: pointer;
+        display: inline-flex;
+        overflow: hidden;
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+
+    }
+
+    .gallerySlide__planWrapper {}
+
+    .gallery__slideWithSnapScroll {
+        scroll-snap-align: start;
+    }
+
+    .gallerySlide__wrappedImage {
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}

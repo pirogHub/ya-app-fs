@@ -1,0 +1,438 @@
+.btn {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2rem;
+    // display: inline-block;
+    box-sizing: border-box;
+    // padding: 0.375rem 0.75rem;
+
+    // font-size: 1rem;
+    font-weight: 400;
+    line-height: (1.5);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid #000;
+    border-radius: 0.375rem;
+    background-color: #f00;
+
+
+    transition: color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+
+    &:hover,
+    &.hover {
+        color: #f00;
+        background-color: #00f;
+        border-color: #0f0;
+    }
+
+
+    &:disabled {
+        cursor: default;
+        color: #ccc;
+        opacity: 0.65;
+    }
+
+    &:disabled:hover,
+    &:disabled.hover {
+        cursor: default;
+        color: #ccc;
+        opacity: 0.65;
+    }
+}
+
+.btn {
+    &.bi-before-pi0 .bi:before {
+        padding-inline: 0;
+    }
+
+    &.btn_more_shadow {
+        box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.525) !important;
+    }
+
+    &.big {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+
+}
+
+@mixin btn-custom ($colorBgNormal: #0d6efd,
+    $colorBgHover: #0b5ed7,
+    $colorBgActive: #0d56c4,
+    $textColor: #000,
+    $disabledColor: #ccc) {
+
+    line-height: normal;
+    // min-height: 2.3rem;
+    color: $textColor;
+    border: 1px solid $colorBgNormal;
+    background-color: ($colorBgNormal);
+    transition: background .3s ease-in;
+    cursor: pointer;
+
+    &:hover,
+    &.hover {
+        color: $textColor;
+        background-color: ($colorBgHover);
+        transition: background .1s ease-in;
+        border-color: $colorBgHover;
+    }
+
+    &:active,
+    &.active {
+        background-color: ($colorBgActive);
+        transition: background .1s ease-in;
+    }
+
+    &:disabled,
+    &.disabled {
+        cursor: default;
+        color: $disabledColor;
+        background: $colorBgNormal;
+        opacity: 0.65;
+    }
+
+    &:disabled:hover,
+    &.disabled.hover {
+        cursor: default;
+        color: $disabledColor;
+        background: $colorBgNormal;
+        opacity: 0.65;
+    }
+
+}
+
+@mixin btn-custom-outline($textColor: black, $borderColor: black) {
+    background: transparent;
+    color: $textColor;
+    border: 1px solid $borderColor;
+
+
+}
+
+//======================================================
+//---------------BLUE----------
+.btn-blue {
+    @include btn-custom (#0d6efd, #0b5ed7);
+}
+
+.btn-blue-outline {
+    @include btn-custom (#0d6efd);
+    @include btn-custom-outline(#0d6efd)
+}
+
+//---------------GRAY----------
+
+.btn-gray {
+    $colorBgNormal: #ccc;
+    $colorBgHover: #aaa;
+    $colorBgActive: #888;
+    $textColor: #000;
+    $disabledColor: rgba(0, 0, 0, 0.5);
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor, $disabledColor);
+}
+
+.btn-gray-outline {
+    $colorBgNormal: rgba(0, 0, 0, 0.1);
+    $colorBgHover: rgba(0, 0, 0, 0.1);
+    $colorBgActive: #888;
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+    $borderColor: #ccc;
+    $textColor: #444;
+    @include btn-custom-outline($textColor, $borderColor)
+}
+
+//---------------YELLOW--------
+.btn-yellow {
+    $colorBgNormal: #ffde5a;
+    $colorBgHover: rgb(255, 200, 0);
+    $colorBgActive: #e7ba05e6;
+    $textColor: #000;
+    $disabledColor: #333;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor, $disabledColor);
+}
+
+.btn-yellow-outline {
+    $colorBgNormal: #ffde5a;
+    $colorBgHover: rgb(255, 200, 0);
+    $colorBgActive: #e7ba05e6;
+    $textColor: #000;
+    $disabledColor: #333;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor, $disabledColor);
+    $textNBorderColor: #ffde5a;
+    @include btn-custom-outline($textNBorderColor, $textNBorderColor)
+}
+
+//----------------WHITE--------
+.btn-white {
+    $colorBgNormal: #fff;
+    $colorBgHover: #ddd;
+    $colorBgActive: #aaa;
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+}
+
+.btn-white-outline {
+    $colorBgNormal: #fff;
+    $colorBgHover: #ddd;
+    $colorBgActive: #aaa;
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+    $textNBorderColor: #fff;
+    @include btn-custom-outline($textNBorderColor, $textNBorderColor)
+}
+
+//----------------GREEN--------
+.btn-green {
+    $colorBgNormal: #00b341;
+    $colorBgHover: #00c448;
+    $colorBgActive: #02a23d;
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+    transition: color .5s ease-in;
+
+    &:hover {
+        transition: color .5s ease-in;
+    }
+}
+
+.btn-green-outline {
+    $colorBgNormal: #00b341;
+    $colorBgHover: #00c448;
+    $colorBgActive: #02a23d;
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+    $textNBorderColor: #00b341;
+    @include btn-custom-outline($textNBorderColor, $textNBorderColor)
+}
+
+//----------------RED--------
+.btn-red {
+    $colorBgNormal: #f33;
+    $colorBgHover: rgb(215, 46, 46);
+    $colorBgActive: rgb(192, 39, 39);
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+    transition: color .5s ease-in;
+
+    &:hover {
+        transition: color .5s ease-in;
+    }
+}
+
+.btn-red-outline {
+    $colorBgNormal: #f11;
+    $colorBgHover: #f33;
+    $colorBgActive: rgb(192, 39, 39);
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+    $textNBorderColor: #f33;
+    @include btn-custom-outline($textNBorderColor, $textNBorderColor)
+}
+
+//--------LightBlue------------
+.btn-lightBlue {
+    $colorBgNormal: #e0edfa;
+    $colorBgHover: #c4d7ea;
+    $colorBgActive: #b5c2d0;
+    $textColor: #0065d9;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+}
+
+
+
+//======================================================
+
+.btn-cirle {
+
+    min-height: 2.3rem;
+    $colorBgNormal: #fff;
+    $colorBgHover: #ddd;
+    $colorBgActive: #aaa;
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+    margin: 0;
+    background: #fff;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.225);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    // align-items: baseline;
+    align-items: center;
+
+    .bi::before {
+        padding: 0;
+        margin-top: 1.2px;
+    }
+}
+
+.search-btn {
+    margin: 0.75rem auto;
+    line-height: 0;
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+
+    &:hover {
+        background: inherit;
+    }
+
+    &:active {
+        background: inherit;
+    }
+}
+
+@mixin custom-btn-link($color: #0065d9,
+    $colorHover: #f33,
+    $colorActive: rgb(203, 41, 41),
+    $textShadowColor: transparent) {
+    line-height: 0;
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+    color: $color;
+    // font-size: 1rem;
+
+    & .bi::before {
+        // font-size: 1rem;
+    }
+
+
+    &:hover,
+    &.hover {
+        color: $colorHover;
+        background-color: transparent;
+        // font-weight: 500;
+        text-shadow: 0 0 1px $textShadowColor;
+    }
+
+    &:active,
+    &.active {
+        color: $colorActive;
+        background-color: transparent;
+    }
+}
+
+.btn-link {
+    $color: #0065d9;
+    @include custom-btn-link($color);
+
+}
+
+.btn-red-link {
+    // margin: 0.75rem auto;
+    $color: #f33;
+    $colorHover: rgb(255, 0, 0);
+    $colorActive: rgb(187, 36, 36);
+    $textShadow: rgb(187, 36, 36);
+    @include custom-btn-link($color, $colorHover, $colorActive, $textShadow);
+}
+
+.btn-gray-link {
+    // margin: 0.75rem auto;
+    $color: #000;
+    $colorHover: rgba(0, 0, 0, 0.6);
+    $colorActive: rgb(163, 163, 163);
+    $textShadow: rgba(0, 0, 0, 0.4);
+    ;
+    @include custom-btn-link($color, $colorHover, $colorActive, $textShadow);
+}
+
+.btn-clean-link {
+    // margin: 0.75rem auto;
+    $color: #000;
+    $colorHover: #ffffff;
+    $colorActive: rgb(163, 163, 163);
+    $textShadow: transparent;
+    @include custom-btn-link($color, $color, $color, $textShadow);
+}
+
+
+.btn-clean {
+    $colorBgNormal: transparent;
+    $colorBgHover: transparent;
+    $colorBgActive: transparent;
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+}
+
+.btn-add {
+    $colorBgNormal: rgba(199, 186, 239, 0.504);
+    $colorBgHover: rgba(119, 99, 138, 0.304);
+    $colorBgActive: rgba(170, 147, 190, 0.304);
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+    width: 100%;
+    // height: 50px;
+    border: 1px solid rgba(213, 186, 239, 0.304);
+}
+
+
+.btn-pill {
+    $colorBgNormal: rgba(0, 0, 0, .06);
+    $colorBgHover: rgb(255, 255, 255);
+    $colorBgActive: rgba(170, 147, 190, 0.304);
+    $textColor: #000;
+    @include btn-custom ($colorBgNormal, $colorBgHover, $colorBgActive, $textColor);
+
+    // background-color: rgba(0, 0, 0, .06);
+    border-radius: 16px;
+    line-height: 32px;
+    padding: 0 12px 0 8px;
+    transition-duration: .1s;
+    transition-property: background-color, color;
+    transition-timing-function: ease;
+
+    text-decoration: none;
+    display: inline-block;
+    transition: background .1s ease-in;
+
+    &:hover,
+    &.hover {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        color: rgba(0, 0, 0, 0.2);
+        transition: background .1s ease-in;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled.hover,
+    &.hover:disabled,
+    &.disabled:hover {
+        cursor: default;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: $colorBgNormal;
+        color: $textColor;
+        transition: background .1s ease-in;
+    }
+}

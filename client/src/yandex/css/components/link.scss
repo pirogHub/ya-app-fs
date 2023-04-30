@@ -1,0 +1,28 @@
+@mixin link($normalFontColor: #0065d9,
+    $hoverFontColor: #f33,
+    $disabledFontColor: #ccc) {
+    color: $normalFontColor;
+    transition: color .15s ease-out;
+
+    &:hover {
+        color: $hoverFontColor;
+        transition: color .15s ease-out;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+        color: $disabledFontColor;
+        cursor: default;
+    }
+}
+
+.link {
+    @include link()
+}
+
+.link-black {
+    $normalFontColor: #000;
+    @include link($normalFontColor)
+}

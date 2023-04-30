@@ -1,0 +1,30 @@
+.my-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+}
+
+.my-col-1 {
+    grid-column-end: span 1;
+}
+
+.my-col-2 {
+    grid-column-end: span 2;
+}
+
+.my-col-3 {
+    grid-column-end: span 3;
+}
+
+.my-col-4 {
+    grid-column-end: span 4;
+}
+
+.my-col-5 {
+    grid-column-end: span 5;
+}
+
+.col-gap {
+    grid-column-gap: 10px;
+}

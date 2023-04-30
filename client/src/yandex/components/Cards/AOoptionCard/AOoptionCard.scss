@@ -1,0 +1,229 @@
+@mixin OptionColorMixin ($NORMAL_Bg: transparent,
+    $NORMAL_Color: #000,
+    $ACTIVE_Bg: #0077ff,
+    $ACTIVE_Color: #fff,
+    $HOVER_Bg: #0065d9,
+    $HOVER_Color: #fff,
+    $INACTIVE_Bg: #d3d3d3,
+    $INACTIVE_Color: #000,
+    $DISABLE_Bg: #d3d3d3,
+    $DISABLE_Color: #000,
+
+
+) {
+    background-color: $NORMAL_Bg;
+    color: $NORMAL_Color;
+
+    &.active {
+        background-color: $ACTIVE_Bg;
+        color: $ACTIVE_Color;
+
+    }
+
+    &.inactive {
+        background-color: $INACTIVE_Bg;
+        color: $INACTIVE_Color;
+    }
+
+    &:hover {
+        background-color: $HOVER_Bg;
+        color: $HOVER_Color;
+    }
+
+    &:active {}
+
+    &.disable,
+    &.disable:hover,
+    &.disable:active,
+    &.disable:focus {
+        background-color: $DISABLE_Bg;
+        color: $DISABLE_Color;
+    }
+
+
+}
+
+
+.Option {
+    box-sizing: border-box;
+    padding-inline: 5px;
+    appearance: none;
+    min-height: 40px;
+    min-width: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 11px 5px rgba(0, 0, 0, .12);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.1s ease-out, background-color .5s ease-out, box-shadow .1s ease-out;
+
+
+    &.active {
+        background-color: #0077ff;
+        color: #fff;
+        box-shadow: none;
+    }
+
+    &.inactive {
+        background-color: #d3d3d3;
+        color: #000;
+        box-shadow: none;
+        transition: transform 0.1s ease-out, background-color .3s ease-out, box-shadow .2s ease-out;
+
+    }
+
+    &:hover {
+        background-color: #0065d9;
+        color: #fff;
+    }
+
+    &:active {
+        transition: transform 0.1s ease-out;
+        transform: scale(90%);
+
+    }
+
+    &.disable,
+    &.disable:hover,
+    &.disable:active,
+    &.disable:focus {
+        background-color: #d3d3d3;
+        color: #000;
+        box-shadow: none;
+        pointer-events: none;
+        opacity: 0.4;
+        cursor: default;
+        transition: all 0.9s ease-out;
+    }
+
+    &.black {
+        $NORMAL_Bg: rgba(0, 0, 0, 0.4);
+        $NORMAL_Color: #fff;
+        $ACTIVE_Bg: #fff;
+        $ACTIVE_Color: #000;
+        $HOVER_Bg: #e8e6e6;
+        $HOVER_Color: #000;
+        $INACTIVE_Bg: $NORMAL_Bg;
+        $INACTIVE_Color: #fff;
+        $DISABLE_Bg: $INACTIVE_Bg;
+        $DISABLE_Color: $INACTIVE_Color;
+        @include OptionColorMixin($NORMAL_Bg,
+            $NORMAL_Color,
+            $ACTIVE_Bg,
+            $ACTIVE_Color,
+            $HOVER_Bg,
+            $HOVER_Color,
+            $INACTIVE_Bg,
+            $INACTIVE_Color,
+            $DISABLE_Bg,
+            $DISABLE_Color)
+    }
+
+
+}
+
+
+
+
+
+.Option_sizeBox_big {
+    // width: 220px;
+    // height: 200px;
+    width: 160px;
+    height: 145px;
+}
+
+.OptionSizeBox_button {
+    min-height: 29px;
+    border-radius: 16px;
+    line-height: 32px;
+    padding: 0 12px 0 12px;
+    transition-duration: .1s;
+    transition-property: background-color, color;
+    transition-timing-function: ease;
+
+    text-decoration: none;
+    display: inline-block;
+}
+
+.OptionSizeBox_pill {
+    width: fit-content;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 16px;
+    line-height: 32px;
+    padding: 0 12px 0 12px;
+    transition-duration: .1s;
+    transition-property: background-color, color;
+    transition-timing-function: ease;
+
+    text-decoration: none;
+    display: inline-block;
+
+    font-size: 1rem !important;
+    margin: 0 5px;
+    color: #fff;
+
+    min-height: auto;
+    box-sizing: content-box;
+}
+
+.OptionSizeBox_circle {
+    padding-inline: 0;
+    border-radius: 50%;
+    // min-height: 40px;
+    // min-width: 42px;
+    min-height: 30px;
+    min-width: 32px;
+}
+
+
+
+.OptionSizeBox_reсtangle {
+    height: 80px;
+    width: calc(25% - 15px);
+    border-radius: 10px;
+    box-shadow: 0 0 11px 5px rgba(0, 0, 0, .1);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.divButton {
+    background: none;
+    border-radius: inherit;
+    color: inherit;
+    cursor: inherit;
+    display: flex;
+    font-size: inherit;
+    line-height: normal;
+    // min-height: 40px;
+    // min-height: 29px;
+    // min-width: 50px;
+    // padding: 0 16px;
+    transition: none;
+    white-space: normal;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Button__text {
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    margin-block: auto;
+    line-height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

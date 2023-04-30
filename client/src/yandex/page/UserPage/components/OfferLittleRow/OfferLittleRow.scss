@@ -1,0 +1,155 @@
+.OfferLittleRow__wrapper-link {
+
+    text-decoration: none;
+    color: #000;
+    // height: 50px;
+    // border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    // &:hover {
+    //     text-decoration: underline;
+    //     color: #33f;
+    //     background-color: #f9ffb1;
+    // }
+}
+
+.OfferLittleRow__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.offerIndex {
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    width: 1rem;
+}
+
+.OfferLittleRow__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    // height: 50px;
+    border-radius: 10px;
+    gap: 20px;
+
+    &:hover {
+        text-decoration: underline;
+        color: #33f;
+        background-color: #f9ffb1;
+
+        & .action-remove {
+            border-top-right-radius: 10px;
+            background-color: rgb(255, 189, 189);
+            border-bottom: 1px solid #767676;
+        }
+
+        & .action-edit {
+            border-bottom-right-radius: 10px;
+            background-color: rgb(255, 234, 157);
+        }
+    }
+
+}
+
+.offerPublic {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+
+    & .offer__img {
+        object-fit: cover;
+        margin: 0;
+        width: 75px;
+        border-radius: 10px;
+        height: 57px;
+    }
+
+    & .offer__details {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        justify-content: space-between;
+
+        &>* {
+            margin-block: 5px;
+        }
+
+        & .offer-label {
+            height: 1.1rem;
+        }
+    }
+
+    & .offer-priceAndDate {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+
+    }
+
+    & .offer__date {
+        font-style: italic;
+        color: #aaa;
+        text-decoration: none;
+        padding-right: 5px;
+        text-align: end;
+    }
+}
+
+.OfferLittleRow__actions-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #ccc;
+    z-index: 10;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+    // &:hover {
+    //     background-color: rgb(255, 200, 0);
+    // }
+
+    & *.bi::before {
+        padding: 0;
+    }
+}
+
+.OfferLittleRow__Action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    overflow: hidden;
+
+    & * {
+        height: auto;
+    }
+
+    &.action-remove {
+        border-bottom: 1px solid transparent;
+    }
+
+    &.action-remove:hover {
+        background-color: rgb(255, 64, 64);
+    }
+
+    &.action-edit:hover {
+        background-color: rgb(255, 200, 0);
+    }
+}
+
+
+.OfferLittleRow__ErrorContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

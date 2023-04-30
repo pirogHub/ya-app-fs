@@ -1,0 +1,19 @@
+.deal-info {
+    box-sizing: border-box;
+    padding-left: 40px;
+    width: 30%;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .price {
+        font-weight: bold;
+    }
+
+    .price-detail {
+        font-size: 0.8rem;
+    }
+}

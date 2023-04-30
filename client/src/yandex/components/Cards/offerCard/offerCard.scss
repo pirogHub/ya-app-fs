@@ -1,0 +1,98 @@
+.offerCard__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    &.spaceBetween {
+        justify-content: space-between;
+    }
+
+    &.childrenFlexOne {
+        &>* {
+            flex: 1;
+            // gap: 10px;
+        }
+    }
+
+    &.childrenFlexOne.beautyFlexChildren {
+
+        // justify-content: space-between;
+
+        &>*:last-child:not(:only-child, :nth-child(4n+1)) {
+            justify-content: flex-end;
+
+
+            &>*>* {
+                // display: flex;
+                // flex-direction: column;
+                // background-color: #f0f;
+                justify-content: flex-end;
+                text-align: end;
+            }
+        }
+
+        &>* {
+            justify-content: center;
+
+
+            &>*>* {
+                // display: flex;
+                // flex-direction: column;
+                // background-color: #f00;
+                justify-content: flex-end;
+            }
+        }
+
+        &>*:nth-child(4n+1) {
+            justify-content: flex-start;
+
+
+            &>*>* {
+                // display: flex;
+                // flex-direction: column;
+                // background-color: #ff0;
+                justify-content: flex-start;
+                text-align: start;
+            }
+        }
+
+        &>*:nth-child(4n) {
+            justify-content: flex-end;
+
+
+            &>*>* {
+                // display: flex;
+                // flex-direction: column;
+                // background-color: #f0f;
+                justify-content: flex-end;
+                text-align: end;
+            }
+        }
+
+
+
+    }
+}
+
+.offerCard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    &.needBottomBorder {
+        border-bottom: 1px solid #ddd;
+    }
+
+}
+
+.offerCard.my-nowrap {
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
+}
+
+.offerCard__title {
+    margin-bottom: 10px;
+
+    h2 {
+        margin-bottom: 0;
+    }
+}

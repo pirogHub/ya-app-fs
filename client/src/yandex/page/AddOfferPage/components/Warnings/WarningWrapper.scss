@@ -1,0 +1,14 @@
+.WarningWrapper {
+    position: sticky;
+    top: 100px;
+    z-index: 1000;
+    background-color: #fff;
+    // height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}

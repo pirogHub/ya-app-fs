@@ -1,0 +1,120 @@
+.AddContainer__wrapper {
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    opacity: 0.6;
+    position: relative;
+    cursor: pointer;
+    padding-top: 30px;
+
+    background-color: rgba(209, 184, 244, 0.296);
+    transition: opacity .2s ease-in;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+        transition: opacity .2s ease-in;
+    }
+
+    &.onSettings {
+        transition: background-color .3s ease-in-out;
+        opacity: 1;
+        background-color: rgb(0, 0, 0, 0.2);
+        cursor: default;
+    }
+
+
+}
+
+.AddContainer__settingsToggler {
+    display: flex;
+    justify-content: flex-end;
+
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 5px;
+    align-items: flex-start;
+    z-index: -1;
+
+
+
+
+    &:hover,
+    &.onSettings {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.AddContainer__content-wrapper {
+    position: relative;
+
+    button {
+        z-index: 1;
+    }
+}
+
+
+
+
+.AddContainer__settings-wrapper {
+    top: 0;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    width: 100%;
+
+
+}
+
+.AddContainer__settings {
+    z-index: 2;
+    opacity: 1;
+
+
+    & li {
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    & li:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+.AddContainer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 0;
+
+    img {
+        width: 100%;
+    }
+
+    &.onSettings {
+        opacity: 0.2;
+    }
+}
+
+.toSettings {
+    margin-right: 10px;
+    padding: 0;
+    padding-block: 2px;
+    border-radius: 2px;
+
+    & .bi:before {}
+}
+
+.toSettings:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+
+}

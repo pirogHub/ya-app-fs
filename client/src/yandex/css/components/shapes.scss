@@ -1,0 +1,14 @@
+.rounded-pill {
+    --bs-border-radius-pill: 50rem;
+    border-radius: var(--bs-border-radius-pill) !important;
+}
+
+.Tag-text {
+    $badge-padding-x: 0.65em;
+    $badge-padding-y: 0.35em;
+    padding: ($badge-padding-y) ($badge-padding-x);
+}
+
+.board-dash {
+    border: 1px dashed #ccc;
+}

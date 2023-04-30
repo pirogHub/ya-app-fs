@@ -1,0 +1,45 @@
+.TableItem {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+
+    & .left_part {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+
+        // align-items: baseline;
+        .index_wrapper {
+            margin-top: 5px;
+        }
+    }
+
+    & .gallery {
+        height: 60%;
+    }
+
+    img {
+        // border-radius: 50px;
+    }
+}
+
+.building_info {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.building_info * {
+    margin: 0;
+}
+
+.building_info>* {
+    margin-bottom: 5px;
+}
+
+.building_info_main {
+    display: flex;
+    align-items: baseline;
+}

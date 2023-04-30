@@ -1,0 +1,40 @@
+.bi.fz-big::before {
+    font-size: 2rem;
+}
+
+.bi::before {
+    padding-top: 2px;
+    padding-right: 10px;
+}
+
+.bi.fill-red::before {
+    color: red;
+}
+
+.fill-white {
+    color: #fff;
+}
+
+.fill-green {
+    color: green;
+}
+
+.fill-red {
+    color: red;
+}
+
+.fill-blue {
+    color: rgb(27, 138, 197);
+}
+
+.before-font-size-150::before {
+    font-size: 1.5rem;
+}
+
+.defore-p-0::before {
+    padding: 0;
+}
+
+.fill-hover-blue:hover {
+    color: rgb(27, 138, 197)
+}

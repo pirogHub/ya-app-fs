@@ -1,0 +1,23 @@
+.AddContent {
+    top: 20px;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // opacity: 0.6;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    row-gap: 10px;
+
+
+    // &:hover {
+    //     opacity: 1;
+    //     transition: opacity .2s ease-in;
+    // }
+}
+
+
+// .card.add {
+//     background-color: rgba(209, 184, 244, 0.296);
+//     position: relative;
+// }

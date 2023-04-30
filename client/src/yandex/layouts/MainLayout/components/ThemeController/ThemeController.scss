@@ -1,0 +1,22 @@
+.ThemeController {
+    background-color: #777;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #555;
+
+    & .bi::before {
+        font-size: 20px;
+        color: #fff;
+        padding: 0;
+    }
+
+    & .ThemeController_on::before {
+        // font-size: 20px;
+        color: #ebe700;
+        // padding: 0;
+    }
+}

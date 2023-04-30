@@ -1,0 +1,56 @@
+.general-info-container>*:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.general-info__title-link {
+    font-size: 1rem;
+}
+
+.general-info {
+    width: 65%;
+
+
+
+    .general-info-container {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #f33;
+    }
+
+    .row {
+        font-size: 11px;
+        font-weight: normal;
+        display: flex;
+        justify-content: flex-start;
+
+        & div {
+            z-index: 1;
+        }
+    }
+
+    .location :not(a) {
+        color: #aaa;
+    }
+
+    .location {
+        // margin-block: 8px;
+    }
+
+}
+
+.Link__click-area {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    // position: absolute;
+    top: 0;
+    width: 100%;
+}

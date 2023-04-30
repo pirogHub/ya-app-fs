@@ -1,0 +1,23 @@
+.Content__columns {
+    box-sizing: border-box;
+    padding-inline: 6%;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    gap: 20px;
+    padding-inline: 7.5%;
+
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    // &>div {
+    //     width: auto;
+    // }
+
+
+    &>div:first-child {
+        max-width: 70%;
+        min-width: 70%;
+    }
+}

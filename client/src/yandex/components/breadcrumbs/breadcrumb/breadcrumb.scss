@@ -1,0 +1,50 @@
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background: transparent;
+}
+
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background: transparent;
+    align-items: center;
+
+    &.disabled {
+        cursor: not-allowed;
+    }
+}
+
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, .8);
+    font-size: 0.7rem;
+    text-decoration: none;
+
+    &:hover {
+        color: #fff
+    }
+}
+
+.breadcrumb-item:last-child a {
+    cursor: default;
+
+    &:hover {
+        color: rgba(255, 255, 255, .75);
+    }
+}
+
+.breadcrumb-item:not(:last-child) a::after {
+    content: "\203a";
+    margin: 0 3px;
+    color: rgba(255, 255, 255, .9);
+}
+
+.breadcrumb-item.active a {
+    color: #fff;
+}

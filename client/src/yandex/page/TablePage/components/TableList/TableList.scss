@@ -1,0 +1,15 @@
+.table_list {}
+
+
+.debugWindow_wrapper {
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    top: 100px;
+}
+
+.debugWindow {
+    position: absolute;
+    right: -100px;
+    background-color: #ccc;
+}

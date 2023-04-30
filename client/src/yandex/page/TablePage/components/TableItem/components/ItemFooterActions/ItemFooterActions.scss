@@ -1,0 +1,10 @@
+.footer__actions {
+    background-color: transparent;
+    margin-top: 10px;
+    display: flex;
+    column-gap: 10px;
+
+    &>* {
+        z-index: 1;
+    }
+}

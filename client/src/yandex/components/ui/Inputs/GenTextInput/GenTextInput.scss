@@ -1,0 +1,56 @@
+.InputControl_box {
+    position: relative;
+    display: inline-flex;
+}
+
+
+.TextInput__clear {
+    position: absolute;
+    height: 100%;
+    width: 28px;
+    right: 0px;
+    margin-block: auto;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    opacity: 0.2;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 2;
+
+    &.TextInput__visible {
+        visibility: visible;
+    }
+}
+
+
+.TextInput__clear-icon {
+    background-image: url("https://yastatic.net/s3/vertis-front-deploy/realty-front-lk/_/2f2ef2d0b27663adcbf0e3787f8a759c.svg");
+    height: 70%;
+    width: 70%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
+
+
+.AddOffer__input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    // height: 2rem;
+    height: 1.2rem;
+    // font-size: 1.12rem;
+    padding-left: 0.4rem;
+    background-color: transparent;
+    width: 100%;
+    z-index: 0;
+
+    padding-right: 17px;
+
+    &:focus {
+        border: 1px solid rgb(255, 217, 0);
+        z-index: 1;
+    }
+}

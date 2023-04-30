@@ -1,0 +1,449 @@
+.Edit__warning-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    // z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// .Edit__warning {
+//     position: sticky;
+//     top: 100px;
+//     z-index: 1000;
+//     background-color: #fff;
+//     // height: 50px;
+//     padding: 10px;
+//     box-sizing: border-box;
+//     border-radius: 10px;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 20px;
+
+// }
+
+
+.offer-form__right {
+
+    // width: 10%;
+    margin-top: 13px;
+
+}
+
+
+
+.offer-form__left {
+    width: 90%;
+}
+
+
+.offer-form {
+    width: 70%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.error-wrapper {
+    position: absolute;
+    // top: -1.1rem;
+    top: -3px;
+    left: 0;
+    font-style: italic;
+    color: #f33;
+    width: 100%;
+    padding-inline: 2px;
+}
+
+.AddOfferPage__loader-wrapper {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+
+    & .loader-content {
+
+        margin: auto;
+        height: 286px;
+    }
+}
+
+// .offer-form-row {
+//     margin-bottom: 20px;
+//     display: flex;
+//     justify-content: flex-start;
+//     position: relative;
+
+
+//     &.invalid {
+//         background-color: rgba(255, 33, 33, 0.2);
+//     }
+
+//     // &>div:first-child {
+//     & .offer-form-row__titleWrapper {
+//         // flex: 1;
+//         width: 20%;
+//         flex-shrink: 0;
+//     }
+
+//     &>div:last-child {
+//         // flex: 2;
+
+//     }
+
+//     & .offer-form-row-content {
+//         flex-basis: 100%;
+//     }
+// }
+
+// .offer-form-row__titleWrapper {
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: baseline;
+// }
+
+// .offer-form-row__title {
+//     overflow: hidden;
+//     position: relative;
+//     text-overflow: ellipsis;
+//     vertical-align: top;
+//     line-height: normal;
+//     // margin-top: 0.5rem;
+//     // height: 100%;
+//     margin-block: auto;
+// }
+
+// .offer-form-row-content {
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: center;
+//     gap: 15px;
+
+//     &>* {
+//         margin-block: 0;
+//     }
+// }
+
+
+// .PhotosDrugDrop {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     column-gap: 10px;
+
+
+
+//     border: 1px dashed #444;
+//     border-radius: 10px;
+//     height: 250px;
+//     cursor: pointer;
+
+//     &.PhotosDrugDrop__little {
+//         margin-top: 20px;
+//         height: auto;
+//         padding-block: 20px;
+//     }
+// }
+
+// .PhotoCatch {
+//     //хз, чьё
+//     visibility: hidden;
+//     background-color: #fff;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: -1000;
+// }
+
+// .AddOfferDescription__textarea {
+//     resize: none;
+//     width: 100%;
+//     outline: none;
+//     height: auto;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     font-size: 1.12rem;
+//     padding: 5px;
+//     background-color: transparent;
+//     box-sizing: border-box;
+//     overflow: hidden;
+//     margin-bottom: 40px;
+
+//     &:focus {
+//         border: 1px solid rgb(255, 217, 0);
+//     }
+// }
+
+// .AddOffer__input {
+//     //уже в TextInput.scss
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     height: 2rem;
+//     font-size: 1.12rem;
+//     padding-left: 0.4rem;
+//     background-color: transparent;
+//     width: 100%;
+//     z-index: 0;
+
+//     &:focus {
+//         border: 1px solid rgb(255, 217, 0);
+//         z-index: 1;
+//     }
+// }
+
+// .InputControl_box-big {
+//     //уже в textInput with fakeplaceholder.scss
+//     width: 100%;
+//     font-size: 2.2rem;
+//     margin-bottom: 20px;
+
+//     &>input {
+//         width: 100%;
+//         height: 3rem;
+
+//         font-size: 2.2rem;
+//         // padding: 5px;
+//     }
+// }
+
+// .TextInput__clear-icon {
+//     //уже в TextInput.scss
+//     background-image: url("https://yastatic.net/s3/vertis-front-deploy/realty-front-lk/_/2f2ef2d0b27663adcbf0e3787f8a759c.svg");
+//     height: 100%;
+//     width: 100%;
+//     display: block;
+//     background-repeat: no-repeat;
+//     background-position: center;
+
+// }
+
+// .TextInput__clear {
+//     //уже в TextInput.scss
+//     position: absolute;
+//     height: 100%;
+//     width: 28px;
+//     right: 4px;
+//     margin-block: auto;
+//     justify-content: center;
+//     align-items: center;
+//     display: flex;
+//     opacity: 0.2;
+//     visibility: hidden;
+//     cursor: pointer;
+//     z-index: 2;
+
+//     &.TextInput__visible {
+//         visibility: visible;
+//     }
+// }
+
+// .InputControl_box {
+//     //уже в TextInput.scss
+//     position: relative;
+//     display: inline-flex;
+// }
+
+// .TextInput__label_placeholder {
+//     // хз что -то
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding-left: .3rem;
+//     // z-index: -2;
+// }
+
+// .TextInput_fakeInput_container {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 3rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: -2;
+//     // padding: 5px 0;
+//     opacity: 0.5;
+
+//     &.TextInput_fakeInput_containerFocused {
+//         opacity: 1;
+//     }
+// }
+
+
+// .AddOffer__input_withFakeInput {
+//     // уже input_withFakeInput
+//     color: #000;
+
+// }
+
+// .TextInput_fakeInput {
+//     // уже input_withFakeInput
+//     opacity: 0;
+//     white-space: pre-wrap;
+// }
+
+
+
+// .AddOffer__input_width100 {
+//     width: 100%;
+// }
+
+// .InputFile_hidden {
+//     opacity: 0;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: -10;
+// }
+
+// .TextInputGroup {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     width: 100%;
+
+//     & div {
+//         flex: 1;
+//         flex-shrink: 0;
+//         flex-basis: 32%;
+//     }
+
+//     & input {
+//         border-radius: 0;
+
+//     }
+
+//     & div:not(:first-child) input {
+//         // border-left: none;
+//         // margin-left: -1px;
+//     }
+
+//     & div:first-child input {
+//         border-radius: 5px 0 0 5px;
+//     }
+
+//     & div:last-child input {
+//         border-radius: 0 5px 5px 0;
+//     }
+
+//     & input:focus {
+//         border-left: 1px solid rgb(255, 217, 0) !important;
+//     }
+// }
+
+// .TextInputGroup_description {
+//     display: flex;
+//     flex-direction: column;
+
+//     & span {
+//         font-size: .9rem;
+//     }
+// }
+
+
+// .AddOfferPage__buttons-container {
+//     display: flex;
+//     margin-block: 20px;
+//     gap: 10px;
+//     padding-inline: 10px;
+
+//     & button {
+//         flex: 1;
+//         // min-width: 25%;
+//         justify-content: center;
+//         // margin-right: 10px;
+
+//     }
+// }
+
+// .AddOfferPriceDetails__onlineShow {
+//     border-radius: 10px;
+//     padding: 20px;
+//     background-color: #eee;
+//     line-height: 1.5rem;
+
+//     &>* {
+//         max-width: 75%;
+//     }
+
+//     & h3 {
+//         margin: 0;
+//         padding: 0;
+//     }
+
+//     & .AddOfferPriceDetails__inputContainer {
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: baseline;
+
+//         & input {
+//             // width: 100%;
+//             height: 100%;
+//             // margin: 0;
+//             // margin-top: 6px;
+//         }
+//     }
+// }
+
+// .photosContainer {
+//     //!!
+//     position: relative;
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 15px;
+// }
+
+// .photosContainer__wrapper {
+//     //!!
+//     // display: flex;
+//     // justify-content: space-around;
+//     padding-inline: 15px;
+//     margin-bottom: 10px;
+// }
+
+// .textAreaSpan {
+//     // хз чьё
+//     display: block;
+//     overflow: hidden;
+
+//     width: 100%;
+//     outline: none;
+
+
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     font-size: 1.12rem;
+//     padding: 8px;
+//     background-color: transparent;
+//     box-sizing: border-box;
+//     overflow: hidden;
+
+//     &:focus {
+//         border: 1px solid rgb(255, 217, 0);
+//     }
+// }
+
+
+// .sticky-wrapper {
+//     position: sticky;
+//     top: 20px;
+//     display: flex;
+//     flex-direction: column;
+//     row-gap: 10px;
+//     margin-bottom: 20px
+// }

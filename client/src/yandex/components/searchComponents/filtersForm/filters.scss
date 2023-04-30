@@ -1,0 +1,100 @@
+.filtersContainer {
+    display: grid;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 10px;
+
+    &>*:not(:only-child) {
+        margin-top: 10px;
+    }
+
+    & input[type=checkbox] {
+        margin: auto 0;
+    }
+
+    label {
+        border: none;
+        // height: 1.5rem;
+        // font-size: 1rem;
+        margin-block: auto;
+        /* padding-inline: 15px; */
+        margin-inline: 2px;
+        /* line-height: 0; */
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+        text-align: center;
+    }
+
+}
+
+
+.filterItemsRow {
+    padding-inline: 5px;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: 35px;
+    column-gap: 15px;
+
+    &.bordersRectangle {
+
+        column-gap: 0;
+    }
+
+
+
+
+    &.bordersRectangle .filterItem {
+        border-radius: 0;
+        border: none;
+        border-left: 1px solid #ccc;
+    }
+
+    &.bordersRectangle .filterItem:first-child {
+        border-radius: 0;
+        border-left: none;
+
+    }
+
+}
+
+
+
+.figc-1 {
+    grid-column: span 1;
+}
+
+.figc-2 {
+    grid-column: span 2;
+}
+
+.figc-3 {
+    grid-column: span 3;
+}
+
+.figc-4 {
+    grid-column: span 4;
+}
+
+.figc-5 {
+    grid-column: span 5;
+}
+
+.figc-6 {
+    grid-column: span 6;
+}
+
+.figc-7 {
+    grid-column: span 7;
+}
+
+.figc-8 {
+    grid-column: span 8;
+}
+
+.magic-grid-class {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(50%, 50%);
+}

@@ -1,0 +1,97 @@
+/* @import "./btn.css"; */
+@import "./components/btn.scss";
+@import "./components/flex.scss";
+@import "./components/grid.scss";
+@import "./components/simplePositions.scss";
+// @import "./components/navs.scss";
+@import "./components/cards.scss";
+@import "./components/icons.scss";
+@import "./components/forms.scss";
+// @import "./components/sliders.scss";
+@import "./components/badge.scss";
+// @import "./components/footer.scss";
+// @import "./components/addItems.scss";
+@import "./components/shapes.scss";
+@import "./components/breadcrumbs.scss";
+@import "./components/link.scss";
+@import "./components/pill.scss";
+@import "./components/footer.scss";
+
+// @import "../components/Sliders/sliders.scss";
+@import "../components/searchComponents/searchStripe.scss";
+
+body {
+  overflow-y: auto;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 11px !important;
+
+  button {
+    font-size: 11px !important;
+  }
+
+
+}
+
+.bg-body-tertiary {
+  --bs-tertiary-bg-rgb: ;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+
+
+.text-bg-secondary {
+  color: #fff !important;
+  background-color: RGBA(108, 117, 125, var(--bs-bg-opacity, 0.6)) !important;
+  text-decoration: none !important;
+  ;
+}
+
+
+
+.small-txt {
+  font-size: 0.8rem;
+}
+
+img {
+  margin: auto;
+}
+
+// .home-content {
+//   box-sizing: border-box;
+//   padding-inline: 6%;
+//   margin-bottom: 20px;
+//   margin-top: 50px;
+//   gap: 10px;
+//   // justify-content: space-between;
+//   width: 100%;
+// }
+
+
+
+
+
+.ReferenceLine {
+  // position: relative;
+}
+
+.fw-bold {
+  font-weight: bold;
+}

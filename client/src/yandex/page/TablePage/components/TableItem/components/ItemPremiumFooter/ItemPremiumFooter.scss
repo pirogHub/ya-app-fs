@@ -1,0 +1,21 @@
+.premium-footer {
+    // margin-top: 10px;
+    // padding-bottom: 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    // justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    // font-size: .8rem;
+    text-decoration: none;
+
+    transition: all .8s ease;
+
+    &:hover {
+        color: #f33;
+        text-decoration: underline;
+        transition: all 0.5s ease;
+    }
+
+}

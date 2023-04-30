@@ -1,0 +1,97 @@
+@mixin link($normalFontColor: #0065d9,
+    $hoverFontColor: #f33,
+    $disabledFontColor: #ccc) {
+    color: $normalFontColor;
+    transition: color .15s ease-out;
+
+    &:hover {
+        color: $hoverFontColor;
+        transition: color .15s ease-out;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+        color: $disabledFontColor;
+        cursor: default;
+    }
+}
+
+.link {
+    @include link()
+}
+
+.link-black {
+    $normalFontColor: #000;
+    @include link($normalFontColor)
+}
+
+.defaultLinkClass {
+
+
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+        // color: $disabledFontColor;
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        & * {
+            cursor: not-allowed;
+        }
+    }
+
+    &.cursorNotAllowed {
+        cursor: not-allowed;
+    }
+
+    &.disabled.disabledByALittleOpacity {
+        opacity: .8;
+    }
+
+}
+
+.linkWrapper {
+    position: relative;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+
+    &.isInline {
+        display: inline;
+    }
+
+    & .deepDevelopment {
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        opacity: 0;
+        z-index: -1;
+        background-color: #ccc;
+        color: #000;
+        border: 1px solid rgb(188, 53, 53);
+        border-radius: 10px;
+        min-width: 170px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    & .deepDevelopment.bottom {
+        top: auto;
+        bottom: -30px;
+    }
+
+    & .deepDevelopment.dark {
+        background-color: #000000ab;
+        color: #fff;
+    }
+
+    & .deepDevelopment.show {
+        transition: all .3s ease-in;
+        opacity: .9;
+        z-index: 15;
+    }
+}

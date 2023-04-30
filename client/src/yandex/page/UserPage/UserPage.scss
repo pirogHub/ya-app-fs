@@ -1,0 +1,82 @@
+.UserPage__wrapper {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-top: 2px;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-inline: 20px;
+    width: 100%;
+
+    & .divider {
+        height: 0.5px;
+        background-color: #ccc;
+        margin-block: 20px;
+    }
+}
+
+.UserPage__name {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.UserOffers-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+
+    & .UserOffers-title {
+        text-align: center;
+    }
+
+    & .UserOffers-content {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        gap: 20px;
+
+        & .UserOffers-actions-wrapper {
+            flex: 1;
+            position: relative;
+
+            & .UserOffers-actions {
+                position: sticky;
+                top: 10px;
+                display: flex;
+                justify-content: flex-end;
+                // margin: 0;
+                // margin-left: 100%;
+            }
+        }
+
+        & .UserOffers-list {
+            flex: 3;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0;
+            // height: 200px;
+        }
+    }
+
+
+}
+
+.UserOffers-divider {
+    // margin-block: 2px;
+    // color: #888b8e;
+    border: 0;
+    // border-top: 1px solid;
+    opacity: .2;
+    height: 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(99, 107, 132, 0.9);
+    box-sizing: border-box;
+    margin-right: 25%;
+}
