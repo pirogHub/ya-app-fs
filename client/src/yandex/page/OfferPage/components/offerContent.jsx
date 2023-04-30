@@ -289,7 +289,7 @@ const OfferContent = (props) => {
                                     addressTitle={generalViewOffer.titles.addressTitle}
                                     addressFixedCoords={generalViewOffer.address.fixedCoords}
                                     offerTitle={generalViewOffer.titles.mainTitle}
-
+                                    firstImg={generalViewOffer?.firstImg}
                                 />
 
                             </OfferCard>
