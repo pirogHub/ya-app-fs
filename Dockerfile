@@ -4,7 +4,7 @@ WORKDIR /app/client
 
 COPY client/package.json /app/client
 
-RUN npm install --force
+RUN npm install --legacy-peer-deps
 
 COPY client /app/client
 
