@@ -1,15 +1,15 @@
 const allImgs = require("../models/allImgs")
 const Avatar = require("../models/Avatar")
 const fs = require("fs");
-
+const config = require("config")
 const IMGModels_VARIABLES = {
     ImageModel: {
         mongoModel: allImgs,
-        path: "http://localhost:8080/api/img"
+        path: `${config.get('serverUrl')}/api/img`
     },
     AvatarModel: {
         mongoModel: Avatar,
-        path: "http://localhost:8080/api/user/avatar"
+        path: `${config.get('serverUrl')}/api/user/avatar`
     }
 }
 

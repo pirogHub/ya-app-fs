@@ -19,6 +19,7 @@ const femaleNames = require("../structs/randomTools/randomUsers/femaleKit")
 const maleNames = require("../structs/randomTools/randomUsers/maleKit")
 const genderKits = require("../structs/randomTools/randomUsers/genderKits")
 const femaleKit = require("../structs/randomTools/randomUsers/femaleKit")
+const { config } = require("config")
 
 
 const router = express.Router({ mergeParams: true })
@@ -226,7 +227,7 @@ router.get("/random/:type/:what/:randomNumFromReactClient?", async (req, res) =>
                         // const randomImgName = await curSchema.findOne().skip(randomIdx).exec()
                         // const name = randomImgName.name
                         if (what === "oneImg") what = name
-                        const link = `http://localhost:8080/api/img/random/${type}/${name}`
+                        const link = `${config.get('serverUrl')}/api/img/random/${type}/${name}`
 
                         resultArr.push(link)
 
@@ -374,7 +375,7 @@ router.post("/random/:type", async (req, res) => {
         //! может быть, возвращать ссылку
         console.log(`imgRandom.routes.js post:type random ${type}s uploaded`);
         // res.status(201).send(`random ${type}s uploaded`)
-        res.status(201).json({ link: `http://localhost:8080/api/img/${curType}/${imgCreated.name}` })
+        res.status(201).json({ link: `${config.get('serverUrl')}/api/img/${curType}/${imgCreated.name}` })
 
         res.end()
     } catch (error) {

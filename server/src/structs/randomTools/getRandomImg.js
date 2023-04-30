@@ -1,6 +1,7 @@
 const Random_Plan = require("../../models/randoms/randomPlanSchema")
 const Random_Img = require("../../models/randoms/randomImgSchema")
 
+const config = require("config")
 
 const ArrayList = require("arraylist")
 const indexesArr = []
@@ -79,7 +80,7 @@ const getRandomImg = async (type = "photos", getOne = false) => {
             // const link = `http://localhost:8080/api/img/random/${type}/${name}`
 
             const name = alreadyFetchedRandomImgs[path].content[randomIdx]
-            const link = `http://localhost:8080/api/img/random/${type}/${name}`
+            const link = `${config.get('serverUrl')}/api/img/random/${type}/${name}`
 
 
             if (!resultArr.includes(link)) resultArr.push(link)

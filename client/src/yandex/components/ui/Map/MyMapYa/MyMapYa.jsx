@@ -6,7 +6,7 @@ import mySuperValidator from "../../../../utils/mySuperValidator";
 import "./MyMapYa.scss"
 
 
-const BallonHeader = ({ offerTitle, userId, priceLabel, fistImg, author }) => {
+const BallonHeader = ({ offerTitle, userId, priceLabel, firstImg, author }) => {
     return `
          <div class="balloon__header">
          <span class="balloon__header_offerTitle">${offerTitle}</span>
@@ -15,16 +15,18 @@ const BallonHeader = ({ offerTitle, userId, priceLabel, fistImg, author }) => {
      `
 }
 
-const BallonBody = ({ offerTitle, priceLabel, fistImg, author }) => {
+const BallonBody = ({ offerTitle, priceLabel, firstImg, author }) => {
     return `
 
-         <img src="https://mykaleidoscope.ru/uploads/posts/2021-03/1615552544_48-p-kvartira-v-neboskrebe-52.jpg" alt="Loading..." height="150" width="200"> <br/> 
+       
+         <img src="${firstImg}" alt="Loading..." height="150" width="200"> <br/> 
          <div class="balloon__body_price">Цена: ${priceLabel}</div> 
 
      `
+    //  <img src="https://mykaleidoscope.ru/uploads/posts/2021-03/1615552544_48-p-kvartira-v-neboskrebe-52.jpg" alt="Loading..." height="150" width="200"> <br/> 
 }
 
-const BallonFooter = ({ coords, addressTitle, offerTitle, priceLabel, fistImg, author }) => {
+const BallonFooter = ({ coords, addressTitle, offerTitle, priceLabel, firstImg, author }) => {
     const coord0 = (coords?.[0])
     const coord1 = (coords?.[1])
     return `
@@ -38,7 +40,17 @@ const BallonFooter = ({ coords, addressTitle, offerTitle, priceLabel, fistImg, a
 
 
 
-const MyMapYa = ({ address, userId, handleIsMapLoaded, addressTitle, addressFixedCoords, offerTitle, priceLabel, fistImg, author }) => {
+const MyMapYa = ({
+    address,
+    userId,
+    handleIsMapLoaded,
+    addressTitle,
+    addressFixedCoords,
+    offerTitle,
+    priceLabel,
+    firstImg,
+    author
+}) => {
 
 
     const coords = !mySuperValidator.isEmptyDetecter(address?.coords) ? address.coords : [55.747, 37.57]
@@ -60,18 +72,18 @@ const MyMapYa = ({ address, userId, handleIsMapLoaded, addressTitle, addressFixe
                 properties={{
 
 
-                    balloonContentHeader: BallonHeader({ offerTitle, priceLabel, fistImg, author, userId }),
+                    balloonContentHeader: BallonHeader({ offerTitle, priceLabel, firstImg, author, userId }),
 
-                    balloonContentBody: BallonBody({ offerTitle, priceLabel, fistImg, author }),
+                    balloonContentBody: BallonBody({ offerTitle, priceLabel, firstImg, author }),
 
-                    balloonContentFooter: BallonFooter({ addressTitle, coords, offerTitle, priceLabel, fistImg, author }),
+                    balloonContentFooter: BallonFooter({ addressTitle, coords, offerTitle, priceLabel, firstImg, author }),
 
                     iconContent: "Нажми на меня",
                 }}
                 options={{
 
                     iconColor: '#ff0000',
-                    fillImageHref: "https://novostroyki.shop/wp-content/uploads/2021/01/754678198272065.jpeg",
+                    fillImageHref: firstImg,
                     preset: "islands#redStretchyIcon"
                 }}
             />
