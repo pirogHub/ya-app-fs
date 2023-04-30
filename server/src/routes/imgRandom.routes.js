@@ -19,7 +19,7 @@ const femaleNames = require("../structs/randomTools/randomUsers/femaleKit")
 const maleNames = require("../structs/randomTools/randomUsers/maleKit")
 const genderKits = require("../structs/randomTools/randomUsers/genderKits")
 const femaleKit = require("../structs/randomTools/randomUsers/femaleKit")
-const { config } = require("config")
+const config = require("config")
 
 
 const router = express.Router({ mergeParams: true })
