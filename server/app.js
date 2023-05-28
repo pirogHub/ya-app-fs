@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 app.use('/api', logger, routes)
 
-const PORT = config.get('port') ?? 8080
+const PORT = config.get('port') ?? 80
 
 if (process.env.NODE_ENV === "development") {
     console.log("app.js development");
